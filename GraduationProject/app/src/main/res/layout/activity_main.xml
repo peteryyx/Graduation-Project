@@ -3,25 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.administrator.graduationproject.activity.MainActivity">
 
-    <!--<android.support.v4.view.ViewPager-->
-        <!--android:id="@+id/vp_fragment"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="10" />-->
-    <ImageView
-        android:id="@+id/image"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"/>
+        android:layout_weight="10" />
+    <!--<ImageView-->
+        <!--android:id="@+id/image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="10"/>-->
 
-    <TableLayout
+    <android.support.design.widget.TabLayout
         android:id="@+id/tl_foot"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.3" />
+        android:layout_weight="1.3"/>
+        <!--app:tabIndicatorHeight="0dp"-->
+
 
 
 </LinearLayout>

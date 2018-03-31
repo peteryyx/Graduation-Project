@@ -10,5 +10,5 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textColor="@android:color/black"
-        android:text="聊天室"/>
+        android:text="视频播放"/>
 </LinearLayout>

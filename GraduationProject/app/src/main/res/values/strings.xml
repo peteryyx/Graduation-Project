@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Graduation Project</string>
+    <array name="tabs">
+        <item>聊天</item>
+        <item>影音</item>
+        <item>娱乐</item>
+    </array>
 </resources>
