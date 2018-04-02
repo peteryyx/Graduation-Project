@@ -15,9 +15,7 @@ import com.example.administrator.graduationproject.R;
  */
 
 public class PlayFragment extends Fragment {
-    public static PlayFragment newInstance(){
-        return new PlayFragment();
-    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

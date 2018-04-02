@@ -15,9 +15,7 @@ import com.example.administrator.graduationproject.R;
  */
 
 public class HomeFragment extends Fragment {
-    public static HomeFragment newInstance(){
-        return new HomeFragment();
-    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

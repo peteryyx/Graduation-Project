@@ -15,9 +15,7 @@ import com.example.administrator.graduationproject.R;
  */
 
 public class VedioFragment extends Fragment {
-    public static VedioFragment newInstance(){
-        return new VedioFragment();
-    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
