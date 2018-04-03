@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.administrator.graduationproject.R;
 import com.example.administrator.graduationproject.adapter.FmPagerAdapter;
+import com.example.administrator.graduationproject.base.BaseActivity;
 import com.example.administrator.graduationproject.fragment.HomeFragment;
 import com.example.administrator.graduationproject.fragment.PlayFragment;
 import com.example.administrator.graduationproject.fragment.VedioFragment;
@@ -15,7 +16,7 @@ import com.example.administrator.graduationproject.fragment.VedioFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     ViewPager vpPager;
     TabLayout tlFoot;

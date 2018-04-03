@@ -23,7 +23,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         app:tabMode="fixed"
-        app:tabIndicatorHeight="0dp" />
+        app:tabIndicatorHeight="0dp"
+        app:tabBackground="@android:color/transparent"/>
 
 
 
