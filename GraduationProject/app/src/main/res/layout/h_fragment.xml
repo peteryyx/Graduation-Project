@@ -11,5 +11,12 @@
         android:gravity="center"
         android:textColor="@android:color/black"
         android:text="聊天页"/>
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/p_fragment_textView"
+        android:layout_marginTop="25dp"
+        android:text="退出登录"/>
 
 </RelativeLayout>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.example.administrator.graduationproject.activity.MainActivity">
+    tools:context="com.example.administrator.graduation.activity.MainActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_fragment"

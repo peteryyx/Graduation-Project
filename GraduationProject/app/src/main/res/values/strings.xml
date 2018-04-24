@@ -1,14 +1,3 @@
 <resources>
-    <string name="app_name">Graduation Project</string>
-    <array name="tabs">
-        <item>聊天</item>
-        <item>影音</item>
-        <item>娱乐</item>
-    </array>
-    <string name="title_activity_login">Sign in</string>
-
-    <!-- Strings related to login -->
-    <string name="prompt_email">用户名</string>
-    <string name="prompt_password">密 码</string>
-    <string name="action_sign_in">注  册</string>
+    <string name="app_name">My Application</string>
 </resources>
