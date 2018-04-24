@@ -22,8 +22,10 @@ public class StartActivity extends BaseActivity {
 //                    Intent intent = new Intent(StartActivity.this,);
                     if (GlobalVariable.login==0) {
                         startActivity(new Intent(StartActivity.this,LoginPageActivity.class));
+                        finish();
                     }else {
                         startActivity(new Intent(StartActivity.this,MainActivity.class));
+                        finish();
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();

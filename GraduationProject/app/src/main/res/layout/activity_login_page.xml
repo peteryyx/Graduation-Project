@@ -24,7 +24,8 @@
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
 
         <EditText
             android:id="@+id/password"
@@ -33,7 +34,7 @@
             android:layout_gravity="center"
             android:textColor="@color/common_bg"
             android:hint="密码"
-            android:layout_margin="10dp"/>
+            />
     </android.support.design.widget.TextInputLayout>
 
     <Button
