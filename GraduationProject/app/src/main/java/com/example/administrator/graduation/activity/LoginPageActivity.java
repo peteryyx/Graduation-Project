@@ -102,7 +102,6 @@ public class LoginPageActivity extends BaseActivity {
                     public void onSuccess() {
                         GlobalVariable.login = 1;//设置成已登录
                         startActivity(new Intent(LoginPageActivity.this, MainActivity.class));
-                        Toast.makeText(LoginPageActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
                         Log.d("LoginPageActivity", "onSuccess:登录成功 ");
                         finish();
                     }
