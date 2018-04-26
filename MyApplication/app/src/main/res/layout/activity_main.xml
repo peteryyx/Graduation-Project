@@ -1,31 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     tools:context="com.example.administrator.graduation.activity.MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_fragment"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#10424242"/>
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tl_foot"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:tabMode="fixed"
-        app:tabIndicatorHeight="0dp"
-        app:tabBackground="@android:color/transparent"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#10424242" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_foot"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:tabBackground="@android:color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/btn_answer_normal">
+
+        <com.example.administrator.graduation.FilletImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            />
+
+        <Button
+            android:id="@+id/log_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退出登录"/>
+
+    </LinearLayout>
 
 
-
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>

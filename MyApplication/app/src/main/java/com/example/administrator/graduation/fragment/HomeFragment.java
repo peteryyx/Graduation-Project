@@ -1,6 +1,5 @@
 package com.example.administrator.graduation.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,12 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.administrator.graduation.R;
-import com.example.administrator.graduation.activity.LoginPageActivity;
-import com.hyphenate.EMCallBack;
-import com.hyphenate.chat.EMClient;
 
 /**
  * Created by Administrator on 2018/3/31 0031.
@@ -45,27 +40,28 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.log_out:
-                EMClient.getInstance().logout(true, new EMCallBack() {
-                    @Override
-                    public void onSuccess() {
-                        // TODO Auto-generated method stub
-                        Toast.makeText(getContext(), "退出成功", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getActivity(), LoginPageActivity.class));
-                        getActivity().finish();
-                    }
-
-                    @Override
-                    public void onProgress(int progress, String status) {
-                        // TODO Auto-generated method stub
-
-                    }
-
-                    @Override
-                    public void onError(int code, String message) {
-                        // TODO Auto-generated method stub
-                        Toast.makeText(getContext(), "异常错误-退出失败", Toast.LENGTH_SHORT).show();
-                    }
-                });
+//                EMClient.getInstance().logout(true, new EMCallBack() {
+//                    @Override
+//                    public void onSuccess() {
+//                        // TODO Auto-generated method stub
+//                        EMClient.getInstance().logout(true);
+//                        Toast.makeText(getContext(), "退出成功", Toast.LENGTH_SHORT).show();
+////                        startActivity(new Intent(MainActivity.this, LoginPageActivity.class));
+//
+//                    }
+//
+//                    @Override
+//                    public void onProgress(int progress, String status) {
+//                        // TODO Auto-generated method stub
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(int code, String message) {
+//                        // TODO Auto-generated method stub
+//                        Toast.makeText(getContext(), "异常错误-退出失败", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
                 break;
         }
     }

@@ -1,10 +1,10 @@
 package com.example.administrator.graduation.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.administrator.graduation.GlobalVariable;
 import com.example.administrator.graduation.R;
 import com.example.administrator.graduation.base.BaseActivity;
 
@@ -18,12 +18,12 @@ public class StartActivity extends BaseActivity {
             @Override
             public void run() {
                 try {
+                    SharedPreferences sp = getSharedPreferences("user",MODE_PRIVATE);
                     Thread.sleep(3000);
-//                    Intent intent = new Intent(StartActivity.this,);
-                    if (GlobalVariable.login==0) {
+                    if (sp.getInt("islogin",0)==0) {//判断是否已经登录0为未登录
                         startActivity(new Intent(StartActivity.this,LoginPageActivity.class));
                         finish();
-                    }else {
+                    }else {//1为已登录
                         startActivity(new Intent(StartActivity.this,MainActivity.class));
                         finish();
                     }
