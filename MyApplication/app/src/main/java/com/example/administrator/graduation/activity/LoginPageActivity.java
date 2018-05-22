@@ -76,11 +76,13 @@ public class LoginPageActivity extends BaseActivity {
                                     // TODO 退出成功回调
                                     Toast.makeText(LoginPageActivity.this, "退出成功", Toast.LENGTH_SHORT).show();
                                 }
+
                                 @Override
                                 public void onProgress(int progress, String status) {
                                     // TODO 退出进度回调
                                     Log.d(getClass().getName(), "退出进度:" + progress + "%");
                                 }
+
                                 @Override
                                 public void onError(int code, String message) {
                                     // TODO 退出失败回调
@@ -95,6 +97,8 @@ public class LoginPageActivity extends BaseActivity {
                     break;
                 case USER_NOT_FOUND://用户不存在
                     Toast.makeText(LoginPageActivity.this, "用户不存在，请注册", Toast.LENGTH_SHORT).show();
+                    denglu.setText("登录");//设置按钮样式
+                    denglu.setEnabled(true);
                     break;
             }
         }
@@ -119,6 +123,7 @@ public class LoginPageActivity extends BaseActivity {
                             EMClient.getInstance().createAccount(account.getText().toString().trim(), password.getText().toString().trim());
                             handler.sendEmptyMessage(0);
                             Log.e("LoginPageActivity", "注册成功");
+
                         } catch (HyphenateException e) {
                             e.printStackTrace();
                             handler.sendEmptyMessage(e.getErrorCode());
@@ -134,11 +139,11 @@ public class LoginPageActivity extends BaseActivity {
                     @Override
                     public void onSuccess() {
 //                        GlobalVariable.login = 1;//设置成已登录
-                        SharedPreferences si = getSharedPreferences("user",MODE_PRIVATE);
+                        SharedPreferences si = getSharedPreferences("user", MODE_PRIVATE);
                         SharedPreferences.Editor se = si.edit();
-                        se.putString("name",account.getText().toString().trim());
-                        se.putString("password",password.getText().toString().trim());
-                        se.putInt("islogin",1);//设置成已登录
+                        se.putString("name", account.getText().toString().trim());
+                        se.putString("password", password.getText().toString().trim());
+                        se.putInt("islogin", 1);//设置成已登录
                         se.commit();
                         startActivity(new Intent(LoginPageActivity.this, MainActivity.class));
                         Log.d("LoginPageActivity", "onSuccess:登录成功 ");
